@@ -4,7 +4,7 @@
 #include <IRremoteInt.h>
 //everything above are libraries needed to be called for the IR sensor and remote to work //http://z3t0.github.io/Arduino-IRremote/
                        
-//#include <Adafruit_CircuitPlayground.h>         // load library for special functions for the Adafruit Circuit Playground  //https://github.com/adafruit/Adafruit_CircuitPlayground
+//#include <Adafruit_CircuitPlayground.h>         // load library for special functions for the Adafruit Circuit Playground  //https://github.com/adafruit/Adafruit_CircuitPlayground *****
 #include <Servo.h>                              //load library for servo  
 
 const int servoPin = 9;                         // the pin that the servo is connected to
@@ -36,7 +36,7 @@ IRrecv irrecv(RECV_PIN);                        // initialize what pin the IR se
 void setup() {
   Serial.begin(9600);                           // the rate communication is between the arduino and computer
   irrecv.enableIRIn();                          // set the IR sensor as an input
-//  CircuitPlayground.begin();                    // allow functions that are built in to the arduino to be used 
+//  CircuitPlayground.begin();                    // allow functions that are built in to the arduino to be used *****
   pinMode(ledPin, OUTPUT);                      // set the led as the output
   myServo.attach(servoPin);                     //now arduino knows that there is an object called mySwitch which is connected to pin 9
 }
@@ -54,7 +54,7 @@ void loop() {
   remoteLevel = digitalRead(RECV_PIN);          // store what the IR sensor reads in the variable remoteLevel
 
   digitalWrite(ledPin, LOW);                    // initialize the LED to OFF
-//  turnBlue();                                   // initialize the arduino pixels 
+//  turnBlue();                                   // initialize the arduino pixels *****
   myServo.write(rest);                          // initialize the servo's positition to "rest"
   
   Serial.print ("The IR sensor is reading:");   // print what the IR sensor is reading on Serial monitor
@@ -64,11 +64,11 @@ void loop() {
     //power on
     Serial.println("TURN ONNN");                // print out "TURN ONNN" because the IR sesnor (remoteLevel) read that the power button has been pressed  
     digitalWrite(ledPin, HIGH);                 // Turn on LED
-//    turnRed();                                  // turn all arduino pizels red 
+//    turnRed();                                  // turn all arduino pizels red *****
     myServo.write(fire);                        // rotate Servo 90 degrees
     delay(servoDelay);                          // wait a second for the servo to load
     delay(fireDelay);
-//    CircuitPlayground.playTone(880,fireDelay);  // play a 784 Hz frequency AND DELAY for fireDelay
+//    CircuitPlayground.playTone(880,fireDelay);  // play a 784 Hz frequency AND DELAY for fireDelay *****
   }
 }
 
@@ -78,7 +78,7 @@ void loop() {
  * turnRed() is to turn all the leds that are built in to the arduino
  * Set pixel color is in RGB.
  */
-//void turnRed(void) {
+//void turnRed(void) {                              //***** uncomment all functions below if using Circuit Playground *****
 //  CircuitPlayground.setPixelColor(1, 255, 0, 0);
 //  CircuitPlayground.setPixelColor(2, 255, 0, 0);
 //  CircuitPlayground.setPixelColor(3, 255, 0, 0);                   //red 
