@@ -1,3 +1,12 @@
+/* 
+* Jose Jimenez
+*
+* (Arduino Uno or Adafruit's Circuit Playground)
+* The purpose of this program is to be able to use  
+* an IR remote to launch a catault from at least 20 
+* ft away. 
+*/
+
 #include <boarddefs.h>
 #include <ir_Lego_PF_BitStreamEncoder.h>
 #include <IRremote.h>
