@@ -13,6 +13,7 @@ Supplies Needed: (One of each)
 About:
 Shooting a catapult is fun and all but it would be better if we were able to shoot the catapult from a distance. That is why I made this project, so that anybody, will be able to launch a catapult with the command of an IR remote.
 
-Extra: If you are using Adafruit's Circuit Playground uncomment the code that I have commented for you. The lines will end in "*****". For example:
+Extra: 
+If you are using Adafruit's Circuit Playground uncomment the code that I have commented for you. The lines will end in "*****". For example:
 
 #include <Adafruit_CircuitPlayground>      //load library... //https://github...Playground  *****
